@@ -12,6 +12,9 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: Home,
+      meta: {
+        requiresAuth: true,
+      },
     },
     {
       path: "/login",
@@ -22,6 +25,15 @@ const router = createRouter({
       },
     },
   ],
+});
+
+router.beforeEach((to, from, next) => {
+  const token = localStorage.getItem("token");
+  if (to.name !== "login" && !token) {
+    next({ name: "login" });
+  } else {
+    next();
+  }
 });
 
 router.beforeResolve(async (to, from) => {
