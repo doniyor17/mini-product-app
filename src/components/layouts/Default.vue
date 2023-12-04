@@ -1,10 +1,18 @@
 <template>
-  Default layout
+  <Navbar />
   <div>
     <slot />
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { onMounted } from "vue";
+import { useStore } from "vuex";
+import Navbar from "../Navbar.vue";
 
-<style lang="scss" scoped></style>
+const store = useStore();
+
+onMounted(async () => {
+  await store.dispatch("fetchProducts");
+});
+</script>

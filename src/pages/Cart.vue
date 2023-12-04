@@ -1,5 +1,5 @@
 <template>
-  Home
+  Cart
   <div v-for="product of products">{{ product.title }}</div>
 </template>
 
