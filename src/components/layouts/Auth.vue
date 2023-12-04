@@ -1,7 +1,6 @@
 <template>
-  Auth layout
-  <div>
-    <slot />
+  <div class="h-screen pt-40">
+    <slot></slot>
   </div>
 </template>
 
