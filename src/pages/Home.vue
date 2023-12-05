@@ -1,4 +1,5 @@
 <template>
+  <div class="text-center text-3xl">Home</div>
   <div
     v-if="loading"
     class="relative"
