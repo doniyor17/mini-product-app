@@ -9,9 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueform/multiselect": "^2.6.6",
     "axios": "^1.6.2",
+    "lodash": "^4.17.21",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5",
+    "vue-toastification": "^2.0.0-rc.5",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
